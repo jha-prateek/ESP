@@ -1,9 +1,9 @@
 #include <ESP8266WiFi.h>
 
-const char* ssid     = "4074";
-const char* password = "estancia4074";
+const char* ssid     = "";
+const char* password = "";
 const char* host = "api.thingspeak.com";
-const char* writeAPIKey = "NVIL3JNU4YE6CPPC";
+const char* writeAPIKey = "";
 
 void setup() {
 
@@ -20,7 +20,7 @@ void loop() {
 
 //Getting Data from Arduino via Serial Communication
   String temperature = "";
-  String humidity = "0";
+  String humidity = "";
   while(Serial.available()){
     temperature += (char)Serial.read();
   }
