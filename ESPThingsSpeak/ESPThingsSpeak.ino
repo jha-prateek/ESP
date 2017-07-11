@@ -6,7 +6,7 @@ int pinDHT11 = 4;
 SimpleDHT11 dht11;
 
 // replace with your channel's thingspeak API key
-String apiKey = "NVIL3JNU4YE6CPPC";
+String apiKey = "";
 
 SoftwareSerial esp8266(2,3); // 2 TX-TX, 3 RX-RX, CH_PD-VCC
 
