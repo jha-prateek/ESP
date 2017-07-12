@@ -16,8 +16,8 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  byte temperature = 0;
-  byte humidity = 0;
+  byte temperature;
+  byte humidity;
   int err = SimpleDHTErrSuccess;
   if ((err = dht11.read(pinDHT11, &temperature, &humidity, NULL)) != SimpleDHTErrSuccess) {
     Serial.print("Read DHT11 failed, err="); 
@@ -26,15 +26,20 @@ void loop() {
   }
   else{
     Serial.print("Temperature - ");
-    Serial.print((int)temperature); 
+    Serial.print(temperature); 
     Serial.print("*C || "); 
     Serial.print("Humidity - ");
-    Serial.print((int)humidity); 
+    Serial.print(humidity); 
     Serial.println("%");
-    
+
+    // Sending data to ESP
     esp8266.print(temperature);
-    
-    // DHT11 sampling rate is 1HZ.
+    esp8266.print(humidity);
+
+    Serial.print("Data Transmitted....");
+    // esp8266.print(humidity);
+      
+    // DHT11 sampling rate is 1HZ (200ms)
     delay(15000);
   }
 }

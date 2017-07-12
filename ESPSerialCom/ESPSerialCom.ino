@@ -19,16 +19,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  while(!Serial.available());
+  
   String command = "";
   
   while(Serial.available()){
-    command += (char)Serial.read();
-    if(command.substring(0,command.length())=="a"){
-      Serial.print("Found!!"); 
-    }
-    else{
-      Serial.print(command);     
-    }
+    command += (char)Serial.read();     
   }
-
+    Serial.print(command);
 }
