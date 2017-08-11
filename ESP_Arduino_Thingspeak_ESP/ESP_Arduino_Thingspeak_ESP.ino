@@ -21,7 +21,6 @@ void loop() {
   
 // Getting Data from Arduino via Serial Communication
   String data = "";
-=======
 
 //Getting Data from Arduino via Serial Communication
   String temperature = "";
