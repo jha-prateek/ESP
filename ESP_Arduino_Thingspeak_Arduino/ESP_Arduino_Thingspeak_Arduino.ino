@@ -35,11 +35,10 @@ void loop() {
     // Sending data to ESP
     esp8266.print(temperature);
     esp8266.print(humidity);
-
     Serial.print("Data Transmitted....");
-    // esp8266.print(humidity);
+
       
     // DHT11 sampling rate is 1HZ (200ms)
-    delay(15000);
+    delay(10000);
   }
 }
