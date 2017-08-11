@@ -2,6 +2,19 @@
 #include <stdlib.h>
 #include <SimpleDHT.h>
 
+/*
+  This code is designed to upload Temperature DATA to ThingSpeak 
+  DHT -> ArduinoRead -> ESP -> Thingspeak
+  ---------------------------
+  Connections: ESP
+  ESP VCC-3.3v
+  ESP TX - 2
+  ESP RX - 3
+  ESP GND - GND
+  ESP GPIO0 - GND
+  ESP CH_PD - 3.3v
+*S
+
 int pinDHT11 = 4;
 SimpleDHT11 dht11;
 
