@@ -17,16 +17,13 @@ void setup() {
 }
 
 void loop() {
-<<<<<<< HEAD
   
 // Getting Data from Arduino via Serial Communication
   String data = "";
 
 //Getting Data from Arduino via Serial Communication
   String temperature = "";
-  String humidity = "";
->>>>>>> f7cc22309f95cc48c9a4e5b49c68f567883c7143
-  while(Serial.available()){
+  String humidity = "";  while(Serial.available()){
     data += (char)Serial.read();
   }
 
